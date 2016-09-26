@@ -13,9 +13,8 @@ namespace MVCBierenApplicatie.Controllers
         public ActionResult Index()
         {
             List<Bier> bieren = new List<Bier>();
-            bieren.Add(new Bier { ID = 1, Naam = "Crystal", Alcohol = 0.1f });
-            bieren.Add(new Bier { ID = 2, Naam = "Jupiler", Alcohol = 0.05f });
-            bieren.Add(new Bier { ID = 3, Naam = "Leffe", Alcohol = 0.07f });
+            bieren.Add(new Bier { ID = 15, Naam = "Felix", Alcohol = 0.07f });
+            bieren.Add(new Bier { ID = 17, Naam = "Roman", Alcohol = 0.075f });
             return View(bieren);
         }
     }
