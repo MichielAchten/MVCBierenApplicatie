@@ -15,7 +15,9 @@
 <ul>
     @foreach (var bier in Model)
     {
-        <li>@bier.ID @bier.Naam bevat @(bier.Alcohol*100) % alcohol</li>
+        
+        <li>@Html.DisplayFor(m=>bier.ID) @bier.Naam @Html.DisplayFor(m=>bier.Alcohol)</li>
+    @*<li>@bier.ID @bier.Naam bevat @(bier.Alcohol*100) % alcohol</li>*@
     }
 </ul>
 
