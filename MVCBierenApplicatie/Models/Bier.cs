@@ -8,6 +8,7 @@ namespace MVCBierenApplicatie.Models
 {
     public class Bier
     {
+        [DisplayFormat(DataFormatString = "{0:000}")]
         public int ID { get; set; }
         public string Naam { get; set; }
         [UIHint("alcoholPercentageKleur")]

@@ -11,13 +11,22 @@
 @using MVCBierenApplicatie.Models;
 @model List<Bier>
 
+@*<h2>Alle bieren</h2>
+@foreach (var bier in Model)
+{
+    @bier.ID@:. @bier.Naam
+    @: (@bier.Alcohol
+    @:%)
+    <br />
+}*@
+
 <h2>Alle bieren</h2>
-<ul>
-    @foreach (var bier in Model)
-    {
-        
-        <li>@Html.DisplayFor(m=>bier.ID) @bier.Naam @Html.DisplayFor(m=>bier.Alcohol)</li>
-    @*<li>@bier.ID @bier.Naam bevat @(bier.Alcohol*100) % alcohol</li>*@
-    }
-</ul>
+        <ul>
+            @foreach (var bier in Model)
+            {
+
+                <li>@Html.DisplayFor(m=>bier.ID) @bier.Naam @Html.DisplayFor(m=>bier.Alcohol)</li>
+            @*<li>@bier.ID @bier.Naam bevat @(bier.Alcohol*100) % alcohol</li>*@
+        }
+    </ul>
 
