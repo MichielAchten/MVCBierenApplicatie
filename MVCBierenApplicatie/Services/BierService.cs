@@ -23,6 +23,7 @@ namespace MVCBierenApplicatie.Services
             bieren[7] = new Bier { ID = 7, Naam = "Rodenbach", Alcohol = 3.5f };
             bieren[8] = new Bier { ID = 8, Naam = "Liefmans goudband", Alcohol = 6f };
             bieren[9] = new Bier { ID = 9, Naam = "Duvel", Alcohol = 7f };
+
         }
 
         public List<Bier> FindAll()
