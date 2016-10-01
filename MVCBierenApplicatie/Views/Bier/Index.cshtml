@@ -21,14 +21,19 @@
     }*@
 
 <h2>Alle bieren</h2>
-<ul>
+@*<ul>*@
     @foreach (var bier in Model)
     {
-        var url = "Verwijderen/" + bier.ID;
-        
-        <li>@Html.DisplayFor(m => bier.ID) @bier.Naam @Html.DisplayFor(m => bier.Alcohol) <a href="@url"><img src="~/Images/delete.png" /></a></li>
+        var url = Url.Action("Verwijderen", "Bieren", new { ID = bier.ID });
+        //var url = "Verwijderen/" + bier.ID;
+
+        <p>
+            @Html.DisplayFor(m => bier.ID) @bier.Naam @Html.DisplayFor(m => bier.Alcohol)
+            <a href="@url"><img src="~/Images/delete.png" alt="delete" /></a>
+        </p>
+        @*<li>@Html.DisplayFor(m => bier.ID) @bier.Naam @Html.DisplayFor(m => bier.Alcohol) <a href="@url"><img src="~/Images/delete.png" /></a></li>*@
         @*<li>@Html.DisplayFor(m => bier.ID) @bier.Naam @Html.DisplayFor(m => bier.Alcohol)</li>*@
         @*<li>@bier.ID @bier.Naam bevat @(bier.Alcohol*100) % alcohol</li>*@
     }
-</ul>
+@*</ul>*@
 
