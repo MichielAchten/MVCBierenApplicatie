@@ -10,8 +10,11 @@ namespace MVCBierenApplicatie.Models
     {
         [DisplayFormat(DataFormatString = "{0:000}")]
         public int ID { get; set; }
+        [Required]
+        [StringLength(20,ErrorMessage="Max. {1} tekens voor {0}")]
         public string Naam { get; set; }
         [UIHint("alcoholPercentageKleur")]
+        [ValidationAttributes.Alcoholpercentage(ErrorMessage="{0} heeft een ongeldige waarde")]
         public float Alcohol { get; set; }
     }
 }

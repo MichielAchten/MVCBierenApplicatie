@@ -37,3 +37,37 @@ textarea {
     color: red;
 }
 
+/* tabel bieren */
+table.bieren, table.bieren td, table.bieren.th{
+    border: 1px solid silver;
+    border-collapse: collapse;
+}
+table.bieren thead{
+    color:white;
+    background-color:gray;
+}
+table.bieren tbody tr:nth-child(even){
+    background-color:#DDDDDD;
+}
+
+/* Styles for validation helpers */
+
+.field-validation-error{
+    color:#ff0000;
+}
+.field-validation-valid{
+    display:none;
+}
+.input-validation-error{
+    border:1px solid #ff0000;
+    background-color:#ffeeee;
+}
+.validation-summary-errors{
+    font-weight:bold;
+    color:#ff0000;
+}
+.validation-summary-valid{
+    display:none;
+}
+
+

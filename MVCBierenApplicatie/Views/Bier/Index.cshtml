@@ -1,10 +1,4 @@
-﻿@*@{
-        ViewBag.Title = "Index";
-    }
-
-    <h2>Index</h2>*@
-
-@{
+﻿@{
     Layout = "~/Views/Shared/_AndereLayout.cshtml";
 }
 
@@ -21,14 +15,33 @@
     }*@
 
 <h2>Alle bieren</h2>
-<ul>
-    @foreach (var bier in Model)
-    {
-        var url = "Verwijderen/" + bier.ID;
-        
-        <li>@Html.DisplayFor(m => bier.ID) @bier.Naam @Html.DisplayFor(m => bier.Alcohol) <a href="@url"><img src="~/Images/delete.png" /></a></li>
-        @*<li>@Html.DisplayFor(m => bier.ID) @bier.Naam @Html.DisplayFor(m => bier.Alcohol)</li>*@
-        @*<li>@bier.ID @bier.Naam bevat @(bier.Alcohol*100) % alcohol</li>*@
-    }
-</ul>
+<table class="bieren">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Naam</th>
+            <th>Alcohol</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var bier in Model)
+        {
+            var url = Url.Action("verwijderen", "Bier", new { ID = bier.ID });
+
+
+            <tr>
+                <td>@Html.DisplayFor(m => bier.ID) </td>
+                <td>@bier.Naam</td>
+                <td>@Html.DisplayFor(m => bier.Alcohol)</td>
+                <td><a href="@url"><img src="~/Images/delete.png" alt="verwijderen" /></a></td>
+            </tr>
+            @*<li>@Html.DisplayFor(m => bier.ID) @bier.Naam @Html.DisplayFor(m => bier.Alcohol)</li>*@
+            @*<li>@bier.ID @bier.Naam bevat @(bier.Alcohol*100) % alcohol</li>*@
+        }
+    </tbody>
+</table>
+
+<p>@Html.ActionLink("Bier toevoegen", "Toevoegen")</p>
+
 

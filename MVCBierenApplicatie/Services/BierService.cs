@@ -20,6 +20,14 @@ namespace MVCBierenApplicatie.Services
             bieren[4] = new Bier { ID = 4, Naam = "Felix kriekbier", Alcohol = 5f };
         }
 
+        //private static Dictionary<int, Bier> bieren = new Dictionary<int, Bier>
+        //{
+        //    {1,new Bier { ID = 1, Naam = "Cnudde kriek", Alcohol = 4.7f }},
+        //    {2,new Bier { ID = 2, Naam = "Liefmans goudenband", Alcohol = 8f }},
+        //    {3,new Bier { ID = 3, Naam = "Sloeber", Alcohol = 7.5f }},
+        //    {4,new Bier { ID = 4, Naam = "Felix kriekbier", Alcohol = 5f }}
+        //};
+
         public List<Bier> FindAll()
         {
             return bieren.Values.ToList();
@@ -33,6 +41,12 @@ namespace MVCBierenApplicatie.Services
         public void Delete(int id)
         {
             bieren.Remove(id);
+        }
+
+        public void Add(Bier bier)
+        {
+            bier.ID = bieren.Keys.Max() + 1;
+            bieren.Add(bier.ID, bier);
         }
     }
 }
