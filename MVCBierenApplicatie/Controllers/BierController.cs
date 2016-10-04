@@ -37,7 +37,7 @@ namespace MVCBierenApplicatie.Controllers
             var bier = bierService.Read(id);
             this.TempData["bier"] = bier;
             bierService.Delete(id);
-            return Redirect("~/Bier/Verwijderd");
+            return RedirectToAction("Verwijderd");
         }
 
         public ActionResult Verwijderd()
