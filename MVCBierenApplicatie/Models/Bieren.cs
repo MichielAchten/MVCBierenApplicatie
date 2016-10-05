@@ -12,7 +12,7 @@ namespace MVCBierenApplicatie.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Bier
+    public partial class Bieren
     {
         public int BierNr { get; set; }
         public string Naam { get; set; }
@@ -20,7 +20,7 @@ namespace MVCBierenApplicatie.Models
         public int SoortNr { get; set; }
         public Nullable<float> Alcohol { get; set; }
     
-        public virtual Brouwer Brouwer { get; set; }
-        public virtual Soort Soort { get; set; }
+        public virtual Brouwer Brouwers { get; set; }
+        public virtual Soort Soorten { get; set; }
     }
 }

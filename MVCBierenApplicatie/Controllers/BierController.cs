@@ -13,6 +13,8 @@ namespace MVCBierenApplicatie.Controllers
         // GET: Bier
 
         private BierService bierService = new BierService();
+
+        private MVCBierenEntities db = new MVCBierenEntities();
         
         public ActionResult Index()
         {
@@ -58,7 +60,7 @@ namespace MVCBierenApplicatie.Controllers
         {
             if (this.ModelState.IsValid)
             {
-                bierService.Add(bier);
+                //bierService.Add(bier);
                 return RedirectToAction("Index");
             }
             else
