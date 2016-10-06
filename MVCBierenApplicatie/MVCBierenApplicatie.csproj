@@ -221,6 +221,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Bieren.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\BierProperties.cs" />
+    <Compile Include="Models\BierUitbreiding.cs" />
     <Compile Include="Models\Brouwer.cs">
       <DependentUpon>Bieren.tt</DependentUpon>
     </Compile>
