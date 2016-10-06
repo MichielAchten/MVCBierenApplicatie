@@ -267,6 +267,7 @@
       <LastGenOutput>Bieren1.cs</LastGenOutput>
     </Content>
     <None Include="Properties\PublishProfiles\BierenApplicatie.pubxml" />
+    <None Include="Properties\PublishProfiles\LocalIIS.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
